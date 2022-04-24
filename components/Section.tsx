@@ -3,14 +3,6 @@ import Image from "next/image";
 import Sponge from "../assets/sponge.gif";
 import React from "react";
 
-const SectionWrapper = styled("div")(() => ({
-  width: "100%",
-  height: "calc(100vh - 5rem)",
-  minHeight: 600,
-  display: "inline-grid",
-  gridTemplateColumns: "1.5fr 1fr",
-}));
-
 const ImageWrapper = styled("div")(() => ({
   width: "100%",
   height: "100%",
@@ -48,7 +40,7 @@ const DescriptionText = styled("div")(() => ({
 
 const Section = () => {
   return (
-    <SectionWrapper>
+    <div className="section-wrapper-div">
       <ImageWrapper>
         <Image src={Sponge} layout="fill" />
       </ImageWrapper>
@@ -62,7 +54,7 @@ const Section = () => {
           squid. Possibly featuring a squirell from Texas.
         </DescriptionText>
       </TextWrapper>
-    </SectionWrapper>
+    </div>
   );
 };
 

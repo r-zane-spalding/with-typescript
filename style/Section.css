@@ -1,0 +1,19 @@
+@media (width <= 700px) {
+  .section-wrapper-div {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    min-height: 600;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (width > 700px) {
+    .section-wrapper-div {
+      width: 100%;
+      height: calc(100vh - 5rem);
+      min-height: 600;
+      display: inline-grid;
+      grid-template-columns: 1.5fr 1fr;
+    }
+}
