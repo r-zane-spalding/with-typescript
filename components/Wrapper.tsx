@@ -2,6 +2,7 @@ import React, { Children, ReactNode, useState } from "react";
 import { styled } from "@mui/material/styles";
 import CropSquareIcon from "@mui/icons-material/CropSquare";
 import ClearIcon from "@mui/icons-material/Clear";
+import MenuIcon from "@mui/icons-material/Menu";
 import { CSSTransition } from "react-transition-group";
 
 type Props = { children: ReactNode };
@@ -43,7 +44,7 @@ const Wrapper: React.FC<Props> = ({ children }) => {
               style={{ zIndex: 100, cursor: "pointer" }}
               onClick={() => setMenuCollapsed(!menuCollapsed)}
             >
-              {!menuCollapsed ? <ClearIcon /> : "Menu"}
+              {!menuCollapsed ? <ClearIcon /> : <MenuIcon />}
             </span>
             <OverlayCropSquareIcon />
           </div>

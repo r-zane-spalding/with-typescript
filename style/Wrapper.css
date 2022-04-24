@@ -91,7 +91,7 @@
   position: fixed;
   top: 5rem;
   right: 0;
-  width: 7.5%;
+  width: 0%;
   transition: width 1s;
   border: 1px solid black;
   border-bottom: 0;
