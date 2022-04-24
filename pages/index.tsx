@@ -1,32 +1,39 @@
-import React from 'react'
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import Wrapper from '../components/Wrapper'
-import Head from 'next/head'
+import React from "react";
+import Link from "next/link";
+import Wrapper from "../components/Wrapper";
+import Head from "next/head";
+import Section from "../components/Section";
 
 const IndexPage = () => (
   <>
     <Wrapper>
-      <div style={{width: '100%', height: '100vh', background: 'red'}}></div>
-      <div style={{width: '100%', height: '100vh', background: 'blue'}}></div>
-      <div style={{width: '100%', height: '100vh', background: 'green'}}></div>
+      <Section />
+      <div
+        style={{
+          width: "100%",
+          height: "calc(100vh - 5rem)",
+          minHeight: 600,
+          background: "red",
+        }}
+      ></div>
+      <div
+        style={{
+          width: "100%",
+          height: "calc(100vh - 5rem)",
+          minHeight: 600,
+          background: "blue",
+        }}
+      ></div>
+      <div
+        style={{
+          width: "100%",
+          height: "calc(100vh - 5rem)",
+          minHeight: 600,
+          background: "green",
+        }}
+      ></div>
     </Wrapper>
   </>
-)
+);
 
-export default IndexPage
-
-
-
-
-
-
-
-{/* <Layout title="Home | Next.js + TypeScript Example">
-  //   <h1>Hello Next.js 👋</h1>
-  //   <p>
-  //     <Link href="/about">
-  //       <a>About</a>
-  //     </Link>
-  //   </p>
-  // </Layout> */}
+export default IndexPage;

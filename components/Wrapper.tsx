@@ -9,10 +9,12 @@ type Props = { children: ReactNode };
 const Wrapper: React.FC<Props> = ({ children }) => {
   const OverlayCropSquareIcon = styled(CropSquareIcon)(() => ({
     position: "absolute",
-    bottom: "-12.5px",
-    left: "-12.5px",
+    bottom: "-6.5px",
+    left: "-7.5px",
     zIndex: 100,
     background: "rgb(244,246,246)",
+    height: 13,
+    width: 13,
   }));
 
   const [menuCollapsed, setMenuCollapsed] = useState(true);
@@ -41,7 +43,7 @@ const Wrapper: React.FC<Props> = ({ children }) => {
               style={{ zIndex: 100, cursor: "pointer" }}
               onClick={() => setMenuCollapsed(!menuCollapsed)}
             >
-              {menuCollapsed ? <ClearIcon /> : "Menu"}
+              {!menuCollapsed ? <ClearIcon /> : "Menu"}
             </span>
             <OverlayCropSquareIcon />
           </div>
