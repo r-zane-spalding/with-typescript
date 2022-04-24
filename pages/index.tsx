@@ -6,7 +6,6 @@ import Head from 'next/head'
 
 const IndexPage = () => (
   <>
-    <style jsx global>{` body{ margin: 0px; padding: 0px; background: #D3D3D3 } `}</style>
     <Wrapper>
       <div style={{width: '100%', height: '100vh', background: 'red'}}></div>
       <div style={{width: '100%', height: '100vh', background: 'blue'}}></div>
