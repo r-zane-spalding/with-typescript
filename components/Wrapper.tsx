@@ -15,23 +15,33 @@ const Wrapper: React.FC<Props> = ({ children }) => {
     background: "rgb(244,246,246)",
   }));
 
-  const [menuExpanded, setMenuExpanded] = useState(false);
+  const [menuCollapsed, setMenuCollapsed] = useState(true);
 
   return (
     <div>
       <div className="header-div">
-        <CSSTransition in={menuExpanded} timeout={200} classNames="title-div">
+        <CSSTransition
+          in={menuCollapsed}
+          timeout={200}
+          classNames="title-div"
+          appear={true}
+        >
           <div>
-            <span>Sempre.ai</span>
+            <span>Hello</span>
           </div>
         </CSSTransition>
-        <CSSTransition in={menuExpanded} timeout={200} classNames="menu-div">
+        <CSSTransition
+          in={menuCollapsed}
+          timeout={200}
+          classNames="menu-div"
+          appear={true}
+        >
           <div>
             <span
               style={{ zIndex: 100, cursor: "pointer" }}
-              onClick={() => setMenuExpanded(!menuExpanded)}
+              onClick={() => setMenuCollapsed(!menuCollapsed)}
             >
-              {menuExpanded ? <ClearIcon /> : "Menu"}
+              {menuCollapsed ? <ClearIcon /> : "Menu"}
             </span>
             <OverlayCropSquareIcon />
           </div>
@@ -39,15 +49,21 @@ const Wrapper: React.FC<Props> = ({ children }) => {
       </div>
       <div className="content-wrapper-div">
         <CSSTransition
-          in={menuExpanded}
+          in={menuCollapsed}
           timeout={200}
           classNames="child-wrapper-div"
+          appear={true}
         >
           <div>{children}</div>
         </CSSTransition>
-        <CSSTransition in={menuExpanded} timeout={200} classNames="sidebar-div">
+        <CSSTransition
+          in={menuCollapsed}
+          timeout={200}
+          classNames="sidebar-div"
+          appear={true}
+        >
           <div>
-            {menuExpanded ? (
+            {!menuCollapsed ? (
               [
                 "Home",
                 "About",
